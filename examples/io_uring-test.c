@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 	}
 
 	ret = io_uring_queue_init(QD, &ring, 0);
+    printf("io_uring-test,line37:%d", ret);
 	if (ret < 0) {
 		fprintf(stderr, "queue_init: %s\n", strerror(-ret));
 		return 1;

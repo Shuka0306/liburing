@@ -303,6 +303,7 @@ int __io_uring_queue_init_params(unsigned entries, struct io_uring *ring,
 				 struct io_uring_params *p, void *buf,
 				 size_t buf_size)
 {
+    printf("start buttom function");
 	int fd, ret = 0;
 	unsigned *sq_array;
 	unsigned sq_entries, index;
@@ -419,7 +420,7 @@ int io_uring_queue_init_params(unsigned entries, struct io_uring *ring,
 			       struct io_uring_params *p)
 {
 	int ret;
-
+    printf("setup,line422:%d", ret);
 	ret = io_uring_queue_init_try_nosqarr(entries, ring, p, NULL, 0);
 	return ret >= 0 ? 0 : ret;
 }
